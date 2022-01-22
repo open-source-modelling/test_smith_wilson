@@ -1,0 +1,24 @@
+/* OSNOVNA STRUKTURA STRANI */
+
+body{	
+	#app{
+		display: flex;
+		align-items: center;
+  		justify-content: center;
+
+        margin: 0;
+        padding: 0;
+        color: #636363;
+        font-family: $content-font;
+        font-weight: $normal;
+        font-size: 100%;
+
+		.wrapper{
+			display: flex;
+			flex-direction: column;
+
+			width: 100%;
+            min-height: 100vh;
+		}
+	}
+}

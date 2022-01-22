@@ -1,0 +1,17 @@
+/* MAIN DIV WITH CONTENT BETWEEN HEADER AND FOOTER */
+
+main{
+    flex: 1;
+    display: flex;
+    align-self: center;
+    box-sizing: border-box; 
+
+    width: 100%;
+    height: 100%;
+    
+    div {
+        -webkit-animation-duration: 200ms;
+        -moz-animation-duration: 200ms;
+        animation-duration: 200ms;
+    }
+}

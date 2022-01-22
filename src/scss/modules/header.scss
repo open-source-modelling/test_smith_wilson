@@ -1,0 +1,20 @@
+/* HEADER AND MAIN NAVIGATION */
+
+header{    
+    font-family: $heading-font;
+    z-index: 999;
+    width: 100%;
+    
+    .logo{                
+        align-self: center;
+            
+        font-size: 28px;
+        color: white;
+    }
+    
+    .app_name{
+        font-size: 28px;
+
+        color: white;
+    }
+}
