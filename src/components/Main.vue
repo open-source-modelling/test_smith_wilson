@@ -55,15 +55,15 @@
           <v-col cols="5" class="mb-4">
             <!-- Header -->
             <v-row>
-              <v-col cols="3" align-center align="center"> Index </v-col>
+              <v-col cols="3"> Index </v-col>
               <v-col cols="3"> Int rate </v-col>
               <v-col cols="3"> Maturities </v-col>
             </v-row>
 
             <!-- Data -->
             <v-row v-for="(irate, index) in interest_rate_arr" :key="index">
-              <v-col cols="3">
-                {{ index }}
+              <v-col cols="3" class="d-flex justify-center align-center">
+                {{ index + 1 }}
               </v-col>
               <v-col cols="3">
                 <v-text-field
@@ -91,12 +91,12 @@
           <v-col cols="5" class="mb-4">
             <!-- Header -->
             <v-row>
-              <v-col cols="3" align-center align="center"> Index </v-col>
+              <v-col cols="3"> Index </v-col>
               <v-col cols="3"> Target </v-col>
               <v-col
                 cols="6"
                 v-if="calibrate_result"
-                class="accent--text text-lg-h6"
+                class="primary--text text-lg-h6"
               >
                 Result
               </v-col>
@@ -104,8 +104,8 @@
 
             <!-- Data -->
             <v-row v-for="(target, index) in targets_arr" :key="index">
-              <v-col cols="3">
-                {{ index }}
+              <v-col cols="3" class="d-flex justify-center align-center">
+                {{ index + 1 }}
               </v-col>
               <v-col cols="3">
                 <v-text-field
@@ -120,7 +120,7 @@
               <v-col
                 v-if="calibrate_result"
                 cols="6"
-                class="accent--text text-lg-h6"
+                class="primary--text text-lg-h6 d-flex justify-center align-center"
               >
                 {{ calibrate_result[index][0] }}
               </v-col>
@@ -137,12 +137,15 @@
         </v-row>
       </v-form>
 
-      <!-- <v-row class="text-center" v-if="calibrate_result">
-      <v-col class="mb-5">
-        <P class="accent--text text-lg-h6"> RESULT: </P>
-        <P class="accent--text text-lg-h6"> {{ calibrate_result }} </P>
-      </v-col>
-    </v-row> -->
+      <br />
+      <br />
+
+      <v-row class="text-center" v-if="calibrate_result">
+        <v-col class="mb-5">
+          <P class="primary--text"> RESULT: </P>
+          <P class="primary--text"> {{ calibrate_result }} </P>
+        </v-col>
+      </v-row>
       <!-- <v-row class="text-center">
       <div class="graphs_container">
         <Graph
@@ -171,8 +174,8 @@ export default {
   data: () => ({
     valid: true,
     rules: [(value) => !!value || "Required"],
-    num_var: 3,
-    num_targ: 5,
+    num_var: 5,
+    num_targ: 10,
     interest_rate_arr: [],
     maturities_arr: [],
     targets_arr: [],
